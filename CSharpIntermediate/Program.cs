@@ -7,11 +7,23 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            var stopWatch = new StopWatch();
-            stopWatch.Start();
-            stopWatch.Start();
-            stopWatch.Stop();
-            Console.WriteLine(stopWatch.Duration);            
+            var post = new Post
+            {
+                Id = 1,
+                Title = "What is C#",
+                Description = "This article describes the C# programming language",
+                CreationDate = DateTime.Now                
+            };
+
+            post.UpVote();
+            post.UpVote();
+            post.UpVote();
+            post.UpVote();
+            post.UpVote();
+            post.DownVote();
+            post.DownVote();
+            Console.WriteLine("Votes: " + post.Votes);
+
         }
     }
 }
