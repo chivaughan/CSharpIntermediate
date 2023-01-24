@@ -7,15 +7,10 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            Stack stack = new Stack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(null);
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-
+            var connection = new OracleConnection("Oracle ConnStr");
+            string commandText = @"SELECT * FROM Employees";
+            var dbCommand = new DbCommand(connection, commandText);
+            dbCommand.Execute();
         }
     }
 }
