@@ -14,10 +14,10 @@ namespace CSharpIntermediate
             {
                 return EndTime - StartTime;
             }
-            set { }
+            private set { }
         }
-        public TimeSpan StartTime { get; set; }
-        public TimeSpan EndTime { get; set; }
+        public TimeSpan StartTime { get; private set; }
+        public TimeSpan EndTime { get; private set; }
 
         int ActiveInstances { get; set; }
         public StopWatch()
