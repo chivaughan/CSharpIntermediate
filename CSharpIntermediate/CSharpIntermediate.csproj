@@ -45,6 +45,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="DbCommand.cs" />
     <Compile Include="DbConnection.cs" />
+    <Compile Include="IWorkflow.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Post.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="SqlConnection.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="StopWatch.cs" />
+    <Compile Include="VideoWorkflow.cs" />
+    <Compile Include="WorkflowEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

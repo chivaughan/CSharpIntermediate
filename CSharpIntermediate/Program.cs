@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace CSharpIntermediate
 {
@@ -7,10 +8,11 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            var connection = new OracleConnection("Oracle ConnStr");
-            string commandText = @"SELECT * FROM Employees";
-            var dbCommand = new DbCommand(connection, commandText);
-            dbCommand.Execute();
+            var workflow = new VideoWorkflow();
+            workflow.Activities.Add("I added a new workflow");
+            workflow.Activities.Add("I added another new workflow");
+            var engine = new WorkflowEngine(workflow);
+            engine.Run();
         }
     }
 }
