@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CSharpIntermediate
 {
-    public interface IWorkflow
+    public interface IActivity
     {
-        void Add(IActivity activity);
-        void Remove(IActivity activity);
-        IEnumerable<IActivity> GetActivities();
+        void Execute();
     }
 }

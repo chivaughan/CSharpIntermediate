@@ -45,7 +45,10 @@
     <Compile Include="Customer.cs" />
     <Compile Include="DbCommand.cs" />
     <Compile Include="DbConnection.cs" />
+    <Compile Include="FileCompresser.cs" />
+    <Compile Include="IActivity.cs" />
     <Compile Include="IWorkflow.cs" />
+    <Compile Include="NetflixWebService.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Post.cs" />
@@ -54,7 +57,9 @@
     <Compile Include="SqlConnection.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="StopWatch.cs" />
-    <Compile Include="VideoWorkflow.cs" />
+    <Compile Include="VideoRenderer3D.cs" />
+    <Compile Include="VideoUploader.cs" />
+    <Compile Include="Workflow.cs" />
     <Compile Include="WorkflowEngine.cs" />
   </ItemGroup>
   <ItemGroup>

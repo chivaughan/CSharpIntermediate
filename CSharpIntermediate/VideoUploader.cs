@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpIntermediate
 {
-    public class WorkflowEngine
+    public class VideoUploader : IActivity
     {
-        public void Run(IWorkflow workflow)
+        public void Execute()
         {
-            foreach (IActivity activity in workflow.GetActivities())
-                activity.Execute();
+            Console.WriteLine("Uploading Video");
         }
     }
 }

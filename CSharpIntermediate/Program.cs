@@ -8,11 +8,13 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            var workflow = new VideoWorkflow();
-            workflow.Activities.Add("I added a new workflow");
-            workflow.Activities.Add("I added another new workflow");
-            var engine = new WorkflowEngine(workflow);
-            engine.Run();
+            var workflow = new Workflow();
+            workflow.Add(new VideoUploader());
+            workflow.Add(new NetflixWebService());
+            workflow.Add(new FileCompresser());
+            workflow.Add(new VideoRenderer3D());
+            var engine = new WorkflowEngine();
+            engine.Run(workflow);
         }
     }
 }
